@@ -4,5 +4,5 @@ The main objective of this project is to characterise caustic structures of iner
 Main idea - to get velocity field of particles upon inputing sequence of images generated from a simulation run (like TG, etc..)/or experimental plasma data.
 This is to characterize the simulated flow(Taylor green or Turbulent) with input taken as images and output as the different layers of the Multivalued flow(velocity being multivalued here). This was a failed attempt of using a particular algorithm which was essentially a specific logistic regression way of separating layers in sequence of images having multi-valued velocity.
 Hence the next approach involves CNN algorithm, which is currently under work. The code will be updated soon.
-#ML approach
+# ML approach
 In ML approach, we try to make NN/CNN work and predict PIV(particle image velocity) step by step. Using a maxshift value the training sample is generated using single image with randomised pixel. First only introduced x shift, then x + y shift, noise + shifts and finally trying multivalued xy shift with noise. The predicted parameters (2*maxshift + 1) tell whether for particular pixel, what the maxshift is (the parameter(s) with +ve value) and then the predicted paramters are used in predicting the PIV contour (using softmax and guassian filter).
